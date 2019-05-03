@@ -7,7 +7,11 @@ namespace PathTest
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(Path.Combine(Environment.CurrentDirectory,"Data"));
+            var path = Path.Combine(Environment.CurrentDirectory, "Data");
+            Console.WriteLine($"Using Path.Combine {path}");
+
+            path = $"{Environment.CurrentDirectory}{Path.AltDirectorySeparatorChar}Data";
+            Console.WriteLine($"Using Path.AltDirectorySeparatorChar {path}");
         }
     }
 }

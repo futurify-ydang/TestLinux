@@ -12,6 +12,9 @@ namespace PathTest
 
             path = $"{Environment.CurrentDirectory}{Path.AltDirectorySeparatorChar}Data";
             Console.WriteLine($"Using Path.AltDirectorySeparatorChar {path}");
+
+            path = Path.Combine("~","Data");
+            Console.WriteLine($"Using Path.Combine and ~ {path}");
         }
     }
 }
